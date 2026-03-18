@@ -3,685 +3,228 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>San Ramon Kitchen Design — Premium Kitchen Remodeling</title>
-<meta name="description" content="San Ramon Valley's premier kitchen design firm. Premium kitchen remodeling in San Ramon, Dougherty Valley, and Bollinger Canyon. 21+ years experience. (415) 907-9070">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<title>San Ramon Kitchen Design — Kitchen Remodeling Experts</title>
+<meta name="description" content="San Ramon's trusted kitchen remodeling experts. Custom designs, premium materials, and expert installation.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 :root {
-  --navy: #1B2A41;
-  --amber: #D97706;
-  --amber-light: #F59E0B;
-  --white: #FFFFFF;
-  --light-gray: #F8FAFC;
-  --charcoal: #374151;
-  --charcoal-light: #6B7280;
-  --border: #E5E7EB;
+  --primary: #B87A5A; --primary-dark: #9A5E40; --primary-light: #D8A082;
+  --dark: #2A1810; --dark-light: #6A4A38;
+  --text: #3A2820; --text-light: #8A7060;
+  --bg: #FDFAF5; --bg-alt: #F5EDE4; --white: #FFFFFF;
 }
-
-html { scroll-behavior: smooth; }
-body { font-family: 'Inter', sans-serif; color: var(--charcoal); line-height: 1.6; -webkit-font-smoothing: antialiased; }
-h1, h2, h3, h4 { font-family: 'DM Serif Display', serif; color: var(--navy); line-height: 1.2; }
+body { font-family: 'Roboto', sans-serif; color: var(--text); line-height: 1.6; }
+h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; color: var(--dark); line-height: 1.2; font-weight: 700; }
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
 .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.btn { display: inline-block; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 15px; transition: all 0.25s; cursor: pointer; border: none; font-family: 'Poppins', sans-serif; }
+.btn-primary { background: var(--primary); color: var(--white); }
+.btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+.btn-white { background: var(--white); color: var(--dark); }
+.btn-white:hover { background: #F1F5F9; }
+.btn-outline { border: 2px solid var(--primary-light); color: var(--primary-light); background: transparent; }
+.btn-outline:hover { background: var(--primary-light); color: var(--white); }
+.section-label { display: inline-block; color: var(--primary); font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; }
+.section-title { font-size: clamp(28px, 4vw, 42px); margin-bottom: 16px; }
+.section-subtitle { color: var(--text-light); font-size: 17px; max-width: 640px; }
+.text-center { text-align: center; }
+.mx-auto { margin-left: auto; margin-right: auto; }
 
-/* Header */
-.header {
-  background: var(--white);
-  border-bottom: 1px solid var(--border);
-  position: sticky;
-  top: 0;
-  z-index: 100;
+.site-nav { background: #fff; padding: 0; border-bottom: 1px solid #E5E7EB; position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+.site-nav .nav-inner { max-width: 1200px; margin: 0 auto; padding: 14px 24px; display: flex; justify-content: space-between; align-items: center; }
+.site-nav .nav-logo { font-family: 'Poppins', sans-serif; font-size: 22px; font-weight: 700; color: var(--dark); text-decoration: none; white-space: nowrap; }
+.site-nav .nav-logo span { color: var(--primary); }
+.site-nav .nav-links { display: flex; align-items: center; gap: 24px; list-style: none; margin: 0; padding: 0; }
+.site-nav .nav-links a { font-family: 'Roboto', sans-serif; font-size: 14px; font-weight: 500; color: var(--text); text-decoration: none; transition: color 0.2s; padding: 6px 0; }
+.site-nav .nav-links a:hover { color: var(--primary); }
+.site-nav .nav-links a.nav-cta-btn { background: var(--primary); color: #fff !important; padding: 10px 22px !important; border-radius: 6px; font-weight: 600; font-size: 14px; transition: background 0.2s; display: inline-block; }
+.site-nav .nav-links a.nav-cta-btn:hover { background: var(--primary-dark); }
+.site-nav .nav-links a.nav-phone { font-weight: 600; color: var(--dark) !important; }
+.nav-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; flex-direction: column; gap: 5px; }
+.nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--dark); transition: all 0.3s; }
+@media(max-width:768px){
+.nav-hamburger { display: flex; }
+.site-nav .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: #fff; flex-direction: column; padding: 16px 24px; border-bottom: 1px solid #E5E7EB; box-shadow: 0 4px 12px rgba(0,0,0,0.08); gap: 0; }
+.site-nav .nav-links.open { display: flex; }
+.site-nav .nav-links a { padding: 12px 0; border-bottom: 1px solid #f0f0f0; width: 100%; }
+.site-nav .nav-links a:last-child { border: none; }
+.site-nav .nav-links a.nav-cta-btn { text-align: center; margin-top: 8px; display: block; padding: 12px 22px !important; }
 }
-.header-top {
-  background: var(--navy);
-  padding: 8px 0;
-  font-size: 13px;
-  color: rgba(255,255,255,0.8);
-}
-.header-top .container {
-  display: flex;
-  justify-content: center;
-  gap: 32px;
-  flex-wrap: wrap;
-}
-.header-top strong { color: var(--amber-light); }
-.header-top a { color: var(--white); text-decoration: none; font-weight: 600; }
-.header-main { padding: 16px 0; }
-.header-main .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.brand { text-decoration: none; }
-.brand h2 { font-size: 22px; color: var(--navy); margin: 0; }
-.brand h2 span { color: var(--amber); }
-.brand p { font-size: 12px; color: var(--charcoal-light); letter-spacing: 1px; text-transform: uppercase; }
 
-.header-phone a {
-  font-family: 'DM Serif Display', serif;
-  font-size: 22px;
-  color: var(--navy);
-  text-decoration: none;
-}
-.header-btn {
-  background: var(--amber);
-  color: var(--white);
-  padding: 12px 24px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 14px;
-  transition: background 0.3s;
-}
-.header-btn:hover { background: #B45309; }
-
-/* Split Hero */
-.hero {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-height: 80vh;
-}
-.hero-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 80px 60px 80px 0;
-  max-width: 600px;
-  margin-left: auto;
-}
-.hero-label {
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: var(--amber);
-  font-weight: 600;
-  margin-bottom: 16px;
-}
-.hero h1 { font-size: 52px; margin-bottom: 20px; }
-.hero p { font-size: 18px; color: var(--charcoal-light); line-height: 1.7; margin-bottom: 32px; }
-.hero-stats {
-  display: flex;
-  gap: 40px;
-  margin-bottom: 36px;
-  padding: 24px 0;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-}
-.stat h3 { font-size: 36px; color: var(--amber); margin-bottom: 2px; }
-.stat p { font-size: 13px; color: var(--charcoal-light); font-weight: 500; }
+.hero { position: relative; min-height: 85vh; display: flex; align-items: center; background: url('images/kitchen-6.jpg') center/cover no-repeat; }
+.hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.40) 100%); }
+.hero-content { position: relative; z-index: 2; max-width: 680px; color: #fff; padding: 80px 0; }
+.hero-badge { display: inline-block; background: var(--primary); color: #fff; padding: 6px 16px; border-radius: 4px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; }
+.hero h1 { font-size: clamp(36px,5vw,58px); margin-bottom: 20px; color: #fff; }
+.hero p { font-size: 19px; line-height: 1.7; opacity: 0.92; margin-bottom: 32px; }
 .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
-.btn-primary {
-  background: var(--amber);
-  color: var(--white);
-  padding: 16px 36px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 16px;
-  transition: all 0.3s;
-  display: inline-block;
-}
-.btn-primary:hover { background: #B45309; transform: translateY(-2px); }
-.btn-secondary {
-  background: var(--navy);
-  color: var(--white);
-  padding: 16px 36px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 16px;
-  transition: all 0.3s;
-  display: inline-block;
-}
-.btn-secondary:hover { background: #0F1A2A; }
-.hero-image {
-  background: url('https://images.unsplash.com/photo-1556909212-d5b604d0c90d?w=1600&q=80') center/cover no-repeat;
-  position: relative;
-}
-.hero-image::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to right, var(--white) 0%, transparent 15%);
-}
+.hero-stats { display: flex; gap: 40px; margin-top: 48px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.2); }
+.hero-stat strong { display: block; font-size: 28px; font-family: 'Poppins', sans-serif; color: var(--primary-light); }
+.hero-stat span { font-size: 13px; opacity: 0.8; text-transform: uppercase; letter-spacing: 0.5px; }
+@media(max-width:768px){ .hero { min-height: 70vh; } .hero-stats { flex-wrap: wrap; gap: 24px; } }
 
-/* Offers Banner */
-.offers-banner { padding: 64px 0; background: var(--navy); }
-.offers-banner .section-label { color: var(--amber-light); }
-.offers-banner h2 { color: var(--white); font-size: 36px; margin-bottom: 40px; }
-.offers-row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-.offer-item {
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 12px;
-  padding: 36px 28px;
-  text-align: center;
-  transition: background 0.3s;
-}
-.offer-item:hover { background: rgba(255,255,255,0.1); }
-.offer-amount {
-  font-family: 'DM Serif Display', serif;
-  font-size: 48px;
-  color: var(--amber-light);
-  margin-bottom: 8px;
-}
-.offer-item h3 { color: var(--white); font-size: 20px; margin-bottom: 10px; }
-.offer-item p { color: rgba(255,255,255,0.7); font-size: 14px; line-height: 1.6; }
-.section-label {
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: var(--amber);
-  font-weight: 600;
-  margin-bottom: 12px;
-}
+.contact-form-section { padding: 64px 0; background: linear-gradient(135deg, #0F172A 0%, var(--dark) 100%); color: #fff; position: relative; overflow: hidden; }
+.contact-form-section::before { content: ''; position: absolute; top: -50%; right: -20%; width: 60%; height: 200%; background: radial-gradient(ellipse, rgba(255,255,255,0.04) 0%, transparent 70%); pointer-events: none; }
+.form-layout { max-width: 1140px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.form-pitch h2 { font-family: 'Poppins', sans-serif; font-size: clamp(30px,4vw,44px); color: #fff; margin-bottom: 16px; }
+.form-pitch p { color: rgba(255,255,255,0.8); font-size: 1.05rem; line-height: 1.7; margin-bottom: 28px; }
+.form-trust-items { display: flex; flex-direction: column; gap: 16px; }
+.form-trust-item { display: flex; align-items: center; gap: 14px; }
+.form-trust-icon { width: 44px; height: 44px; background: rgba(255,255,255,0.08); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.form-trust-icon svg { width: 22px; height: 22px; stroke: var(--primary-light); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.form-trust-item strong { display: block; color: #fff; font-size: 0.95rem; }
+.form-trust-item span { color: rgba(255,255,255,0.6); font-size: 0.85rem; }
+@media(max-width:768px){ .form-layout { grid-template-columns: 1fr; gap: 36px; } .form-pitch { text-align: center; } .form-trust-items { align-items: center; } }
 
-/* Kitchen Showcase */
-.showcase { padding: 80px 0; background: var(--white); }
-.section-title { font-size: 42px; margin-bottom: 16px; }
-.section-subtitle { font-size: 18px; color: var(--charcoal-light); max-width: 600px; margin-bottom: 48px; }
-.showcase-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-.showcase-card {
-  border-radius: 12px;
-  overflow: hidden;
-  position: relative;
-  height: 360px;
-  cursor: pointer;
-}
-.showcase-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.6s;
-}
-.showcase-card:hover img { transform: scale(1.08); }
-.showcase-info {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 28px;
-  background: linear-gradient(transparent, rgba(27,42,65,0.9));
-  color: var(--white);
-}
-.showcase-info h3 { color: var(--white); font-size: 20px; margin-bottom: 4px; }
-.showcase-info p { font-size: 14px; opacity: 0.85; }
+.contact-form { max-width: 480px; margin: 0 auto; background: #fff; border-radius: 16px; padding: 36px; box-shadow: 0 8px 32px rgba(0,0,0,0.08); position: relative; z-index: 2; }
+.contact-form .form-title { font-family: 'Poppins', sans-serif; font-size: 24px; color: var(--dark); margin-bottom: 4px; text-align: center; font-weight: 700; }
+.contact-form .form-subtitle { color: var(--text-light); font-size: 0.9rem; text-align: center; margin-bottom: 24px; }
+.contact-form label { display: block; font-weight: 600; margin-bottom: 4px; font-size: 0.9rem; color: var(--dark); }
+.contact-form input, .contact-form textarea { width: 100%; padding: 11px 14px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 0.95rem; font-family: 'Roboto', sans-serif; margin-bottom: 14px; transition: border-color 0.2s, box-shadow 0.2s; }
+.contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(0,0,0,0.05); }
+.contact-form textarea { min-height: 80px; resize: vertical; }
+.contact-form button[type="submit"] { width: 100%; background: var(--primary); color: #fff; padding: 15px; border: none; border-radius: 8px; font-weight: 700; font-size: 1.05rem; cursor: pointer; transition: background 0.2s, transform 0.2s; font-family: 'Poppins', sans-serif; }
+.contact-form button[type="submit"]:hover { background: var(--primary-dark); transform: translateY(-1px); }
+.contact-form button:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+.form-status { text-align: center; margin-top: 12px; font-size: 0.9rem; min-height: 20px; }
+.form-status.success { color: #16a34a; }
+.form-status.error { color: #dc2626; }
+.form-phone-fallback { text-align: center; margin-top: 12px; font-size: 0.85rem; color: var(--text-light); }
+.form-phone-fallback a { color: var(--primary); font-weight: 600; }
 
-/* Services */
-.services { padding: 80px 0; background: var(--light-gray); }
-.services-layout {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 60px;
-  align-items: start;
-}
-.services-intro { position: sticky; top: 120px; }
-.services-intro h2 { font-size: 38px; margin-bottom: 16px; }
-.services-intro p { color: var(--charcoal-light); font-size: 16px; line-height: 1.8; margin-bottom: 24px; }
-.services-list { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-.svc-card {
-  background: var(--white);
-  padding: 32px;
-  border-radius: 10px;
-  border: 1px solid var(--border);
-  transition: all 0.3s;
-}
-.svc-card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.06); }
-.svc-card.primary {
-  border: 2px solid var(--amber);
-  grid-column: 1 / -1;
-}
-.svc-tag {
-  background: var(--amber);
-  color: var(--white);
-  font-size: 11px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  padding: 4px 12px;
-  border-radius: 4px;
-  display: inline-block;
-  margin-bottom: 12px;
-}
-.svc-card h3 { font-size: 22px; margin-bottom: 10px; }
-.svc-card p { color: var(--charcoal-light); font-size: 14px; line-height: 1.7; }
+.offers { padding: 80px 0; background: var(--bg-alt); }
+.offers-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; margin-top: 40px; }
+.offer-card { background: var(--white); border-radius: 16px; padding: 40px 36px; text-align: center; box-shadow: 0 12px 32px rgba(0,0,0,0.06); border: none; transition: transform 0.3s, box-shadow 0.3s; }
+.offer-card:hover { transform: translateY(-6px); box-shadow: 0 20px 48px rgba(0,0,0,0.1); }
+.offer-pct { font-family: 'Poppins', sans-serif; font-size: 52px; font-weight: 800; color: var(--primary); line-height: 1; }
+.offer-label { font-size: 14px; color: var(--text-light); text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
+.offer-card h3 { margin-top: 16px; font-size: 22px; }
+.offer-card p { margin-top: 8px; color: var(--text-light); font-size: 15px; }
+.services { padding: 80px 0; }
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; margin-top: 48px; }
+.service-item { display: flex; gap: 20px; align-items: flex-start; padding: 28px; background: var(--white); border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.04); transition: box-shadow 0.3s; }
+.service-item:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+.service-icon { flex-shrink: 0; width: 56px; height: 56px; background: var(--bg-alt); color: var(--primary); border-radius: 12px; display: flex; align-items: center; justify-content: center; }
+.service-item h3 { font-size: 20px; margin-bottom: 6px; }
+.service-item p { color: var(--text-light); font-size: 15px; }
 
-/* Process */
 .process { padding: 80px 0; background: var(--white); }
-.process-timeline {
-  display: flex;
-  gap: 0;
-  margin-top: 48px;
-  position: relative;
-}
-.process-timeline::before {
-  content: '';
-  position: absolute;
-  top: 32px;
-  left: 40px;
-  right: 40px;
-  height: 3px;
-  background: var(--border);
-}
-.timeline-step {
-  flex: 1;
-  text-align: center;
-  position: relative;
-  padding: 0 12px;
-}
-.timeline-dot {
-  width: 64px;
-  height: 64px;
-  background: var(--white);
-  border: 3px solid var(--amber);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 20px;
-  position: relative;
-  z-index: 2;
-  font-family: 'DM Serif Display', serif;
-  font-size: 24px;
-  color: var(--amber);
-}
-.timeline-step h4 { font-size: 16px; margin-bottom: 6px; }
-.timeline-step p { font-size: 13px; color: var(--charcoal-light); line-height: 1.5; }
+.process-steps { max-width: 720px; margin: 48px auto 0; position: relative; }
+.process-steps::before { content: ''; position: absolute; left: 30px; top: 0; bottom: 0; width: 2px; background: #E5E7EB; }
+.step { display: flex; gap: 28px; margin-bottom: 40px; position: relative; }
+.step:last-child { margin-bottom: 0; }
+.step-number { flex-shrink: 0; width: 60px; height: 60px; background: var(--dark); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Poppins', sans-serif; font-size: 20px; font-weight: 700; color: var(--primary-light); position: relative; z-index: 1; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+.step-content { padding-top: 12px; }
+.step h3 { font-size: 18px; margin-bottom: 6px; }
+.step p { color: var(--text-light); font-size: 15px; line-height: 1.7; }
 
-/* Testimonials */
-.testimonials { padding: 80px 0; background: var(--light-gray); }
-.testimonials-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
-  margin-top: 48px;
-}
-.review-card {
-  background: var(--white);
-  border-radius: 12px;
-  padding: 40px;
-  border: 1px solid var(--border);
-  position: relative;
-}
-.review-card::before {
-  content: '\201C';
-  font-family: 'DM Serif Display', serif;
-  font-size: 80px;
-  color: var(--amber);
-  opacity: 0.15;
-  position: absolute;
-  top: 16px;
-  left: 28px;
-  line-height: 1;
-}
-.review-stars { color: var(--amber); font-size: 18px; margin-bottom: 16px; letter-spacing: 3px; }
-.review-card blockquote {
-  font-size: 16px;
-  line-height: 1.8;
-  color: var(--charcoal);
-  margin-bottom: 24px;
-  position: relative;
-  z-index: 1;
-}
-.reviewer { display: flex; align-items: center; gap: 14px; }
-.reviewer-initials {
-  width: 44px;
-  height: 44px;
-  background: var(--navy);
-  color: var(--white);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 16px;
-}
-.reviewer-info p { font-size: 15px; font-weight: 600; color: var(--navy); }
-.reviewer-info span { font-size: 13px; color: var(--charcoal-light); }
+.reviews { padding: 80px 0; background: var(--bg); }
+.reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 32px; margin-top: 48px; }
+.review-card { background: var(--white); border-radius: 4px; padding: 36px; border: 2px solid #E5E7EB; border-top: 3px solid var(--primary); }
+.review-stars { color: var(--primary); font-size: 18px; letter-spacing: 2px; margin-bottom: 16px; }
+.review-card blockquote { font-size: 16px; line-height: 1.7; color: var(--text); font-style: italic; margin-bottom: 20px; }
+.review-author { font-weight: 700; color: var(--dark); }
+.review-location { font-size: 14px; color: var(--text-light); }
+@media(max-width:768px){ .reviews-grid { grid-template-columns: 1fr; } }
 
-/* Local */
-.local {
-  padding: 80px 0;
-  background: var(--navy);
-  color: var(--white);
-}
-.local-split {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
-}
-.local h2 { color: var(--white); font-size: 38px; margin-bottom: 20px; }
-.local p { color: rgba(255,255,255,0.8); font-size: 16px; line-height: 1.8; margin-bottom: 16px; }
-.local-areas {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  margin: 24px 0;
-}
-.area-tag {
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.15);
-  padding: 10px 16px;
-  border-radius: 6px;
-  font-size: 14px;
-  color: rgba(255,255,255,0.9);
-  font-weight: 500;
-}
-.local-img { border-radius: 12px; overflow: hidden; }
-.local-img img { width: 100%; display: block; border-radius: 12px; }
+.local { padding: 80px 0; }
+.local-split { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; margin-top: 40px; }
+.local-img { border-radius: 12px; width: 100%; height: 420px; object-fit: cover; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+.local-text h3 { font-size: 28px; margin-bottom: 16px; }
+.local-text p { color: var(--text-light); font-size: 16px; margin-bottom: 16px; line-height: 1.8; }
+.local-text ul { list-style: none; margin-top: 20px; }
+.local-text ul li { padding: 8px 0 8px 24px; position: relative; color: var(--text); font-size: 15px; }
+.local-text ul li::before { content: ''; position: absolute; left: 0; top: 16px; width: 10px; height: 10px; background: var(--primary); border-radius: 2px; }
+@media(max-width:768px){ .local-split { grid-template-columns: 1fr; gap: 32px; } }
 
-/* CTA */
-.cta { padding: 80px 0; background: var(--white); text-align: center; }
-.cta h2 { font-size: 44px; margin-bottom: 16px; }
-.cta p { font-size: 18px; color: var(--charcoal-light); max-width: 580px; margin: 0 auto 32px; }
-.cta-phone {
-  font-family: 'DM Serif Display', serif;
-  font-size: 36px;
-  color: var(--navy);
-  text-decoration: none;
-  display: block;
-  margin-bottom: 24px;
-}
-.cta-phone:hover { color: var(--amber); }
-.cta-sub { font-size: 14px; color: var(--charcoal-light); margin-top: 16px; }
+.cta { padding: 80px 0; background: linear-gradient(135deg, var(--dark) 0%, #0F172A 100%); color: #fff; text-align: center; }
+.cta h2 { color: #fff; font-size: clamp(30px,4vw,44px); margin-bottom: 16px; }
+.cta p { opacity: 0.85; font-size: 18px; max-width: 560px; margin: 0 auto 32px; }
+.cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.cta-phone { font-family: 'Poppins', sans-serif; font-size: 32px; color: var(--primary-light); margin-top: 28px; font-weight: 700; }
+.cta-phone a { color: var(--primary-light); text-decoration: none; }
 
-/* Footer */
-.footer { background: var(--navy); color: rgba(255,255,255,0.7); padding: 48px 0 28px; }
-.footer-inner {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 48px;
-  margin-bottom: 36px;
-}
-.footer h4 { color: var(--white); font-size: 18px; margin-bottom: 16px; }
-.footer p { font-size: 14px; line-height: 1.8; }
-.footer ul { list-style: none; }
-.footer ul li { margin-bottom: 10px; }
-.footer ul a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 14px; transition: color 0.3s; }
-.footer ul a:hover { color: var(--amber-light); }
-.footer-bar {
-  border-top: 1px solid rgba(255,255,255,0.1);
-  padding-top: 20px;
-  display: flex;
-  justify-content: space-between;
-  font-size: 13px;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-.footer-bar a { color: var(--amber-light); text-decoration: none; }
+footer { background: #0F1924; color: rgba(255,255,255,0.6); padding: 48px 0 24px; font-size: 14px; }
+footer .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+footer a { color: var(--primary-light); text-decoration: none; }
+.footer-license { text-align: center; padding: 8px 0 0; font-size: 0.8rem; opacity: 0.6; color: rgba(255,255,255,0.5); }
 
-/* Responsive */
-@media (max-width: 1024px) {
-  .hero { grid-template-columns: 1fr; }
-  .hero-text { padding: 60px 0; max-width: 100%; margin: 0; }
-  .hero-image { min-height: 400px; }
-  .hero-image::before { background: linear-gradient(to bottom, var(--white) 0%, transparent 20%); }
-  .services-layout { grid-template-columns: 1fr; }
-  .services-intro { position: static; }
-  .offers-row { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
-  .showcase-grid { grid-template-columns: 1fr; max-width: 500px; }
-  .local-split { grid-template-columns: 1fr; }
-  .footer-inner { grid-template-columns: 1fr; }
-}
-
-@media (max-width: 768px) {
-  .hero h1 { font-size: 36px; }
-  .hero-stats { gap: 24px; flex-wrap: wrap; }
-  .section-title { font-size: 32px; }
-  .services-list { grid-template-columns: 1fr; }
-  .svc-card.primary { grid-column: auto; }
-  .process-timeline { flex-direction: column; gap: 28px; }
-  .process-timeline::before { display: none; }
-  .testimonials-row { grid-template-columns: 1fr; }
-  .local-areas { grid-template-columns: 1fr; }
-  .cta h2 { font-size: 32px; }
-  .cta-phone { font-size: 28px; }
-  .brand h2 { font-size: 18px; }
-  .header-phone a { font-size: 18px; }
-}
-
-@media (max-width: 480px) {
-  .hero h1 { font-size: 30px; }
-  .hero-stats { flex-direction: column; gap: 16px; }
-  .stat { display: flex; align-items: baseline; gap: 12px; }
-  .stat h3 { font-size: 28px; }
-}
-
-/* ─── Photo Gallery ─── */
-.gallery-section { padding: 80px 0; background: #F8FAFC; }
+.gallery-section { padding: 80px 0; background: var(--bg); }
 .gallery-section .section-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 .gallery-header { text-align: center; margin-bottom: 48px; }
-.gallery-header .gallery-label {
-  display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: 3px;
-  text-transform: uppercase; color: #D97706; margin-bottom: 12px;
-}
-.gallery-header h2 {
-  font-family: 'DM Serif Display', Georgia, serif; font-size: clamp(28px, 4vw, 42px);
-  color: #1B2A41; margin-bottom: 16px;
-}
-.gallery-header p { color: #6B7280; font-size: 1.05rem; max-width: 600px; margin: 0 auto; }
+.gallery-header .gallery-label { display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--primary); margin-bottom: 12px; }
+.gallery-header h2 { font-family: 'Poppins', sans-serif; font-size: clamp(28px,4vw,42px); color: var(--dark); margin-bottom: 16px; }
+.gallery-header p { color: var(--text-light); font-size: 1.05rem; max-width: 600px; margin: 0 auto; }
 .gallery-filters { display: flex; justify-content: center; gap: 12px; margin-bottom: 36px; flex-wrap: wrap; }
-.gallery-filter-btn {
-  padding: 8px 20px; border: 2px solid #E5E7EB; border-radius: 24px; background: #fff;
-  font-size: 14px; font-weight: 600; color: #374151; cursor: pointer; transition: all 0.2s;
-  font-family: 'Inter', sans-serif;
-}
-.gallery-filter-btn:hover { border-color: #D97706; color: #D97706; }
-.gallery-filter-btn.active { background: #D97706; color: #fff; border-color: #D97706; }
-.gallery-grid {
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 16px;
-}
-.gallery-item {
-  position: relative; border-radius: 12px; overflow: hidden;
-  aspect-ratio: 4/3; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
-.gallery-item img {
-  width: 100%; height: 100%; object-fit: cover;
-  transition: transform 0.4s ease;
-}
+.gallery-filter-btn { padding: 8px 20px; border: 2px solid #E5E7EB; border-radius: 24px; background: #fff; font-size: 14px; font-weight: 600; color: var(--text); cursor: pointer; transition: all 0.2s; font-family: 'Roboto', sans-serif; }
+.gallery-filter-btn:hover { border-color: var(--primary); color: var(--primary); }
+.gallery-filter-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+.gallery-item { position: relative; border-radius: 12px; overflow: hidden; aspect-ratio: 4/3; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
 .gallery-item:hover img { transform: scale(1.05); }
-.gallery-item .overlay {
-  position: absolute; inset: 0;
-  background: linear-gradient(to top, rgba(27,42,65,0.7) 0%, transparent 50%);
-  opacity: 0; transition: opacity 0.3s;
-  display: flex; align-items: flex-end; padding: 20px;
-}
+.gallery-item .overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 50%); opacity: 0; transition: opacity 0.3s; display: flex; align-items: flex-end; padding: 20px; }
 .gallery-item:hover .overlay { opacity: 1; }
 .overlay-text { color: #fff; font-weight: 600; font-size: 15px; }
-.gallery-show-more {
-  text-align: center; margin-top: 36px;
-}
-.gallery-show-more button {
-  padding: 14px 36px; background: #1B2A41; color: #fff; border: none;
-  border-radius: 6px; font-size: 16px; font-weight: 600; cursor: pointer;
-  font-family: 'Inter', sans-serif; transition: background 0.2s;
-}
-.gallery-show-more button:hover { background: #0F172A; }
+.gallery-show-more { text-align: center; margin-top: 36px; }
+.gallery-show-more button { padding: 14px 36px; background: var(--dark); color: #fff; border: none; border-radius: 6px; font-size: 16px; font-weight: 600; cursor: pointer; font-family: 'Roboto', sans-serif; transition: background 0.2s; }
+.gallery-show-more button:hover { background: var(--dark-light); }
+@media(max-width:768px){ .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 8px; } .gallery-item { border-radius: 8px; } }
 
-/* Lightbox */
-.lightbox {
-  display: none; position: fixed; inset: 0; z-index: 9999;
-  background: rgba(0,0,0,0.92); align-items: center; justify-content: center;
-}
+.lightbox { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0,0,0,0.92); align-items: center; justify-content: center; }
 .lightbox.active { display: flex; }
-.lightbox img {
-  max-width: 90vw; max-height: 85vh; border-radius: 8px;
-  object-fit: contain; box-shadow: 0 8px 40px rgba(0,0,0,0.5);
-}
-.lightbox-close {
-  position: absolute; top: 20px; right: 28px;
-  background: none; border: none; color: #fff; font-size: 36px;
-  cursor: pointer; z-index: 10001; opacity: 0.8; transition: opacity 0.2s;
-}
+.lightbox img { max-width: 90vw; max-height: 85vh; border-radius: 8px; object-fit: contain; box-shadow: 0 8px 40px rgba(0,0,0,0.5); }
+.lightbox-close { position: absolute; top: 20px; right: 28px; background: none; border: none; color: #fff; font-size: 36px; cursor: pointer; z-index: 10001; opacity: 0.8; }
 .lightbox-close:hover { opacity: 1; }
-.lightbox-nav {
-  position: absolute; top: 50%; transform: translateY(-50%);
-  background: rgba(255,255,255,0.15); border: none; color: #fff;
-  font-size: 28px; padding: 12px 18px; cursor: pointer; border-radius: 6px;
-  transition: background 0.2s;
-}
+.lightbox-nav { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.15); border: none; color: #fff; font-size: 28px; padding: 12px 18px; cursor: pointer; border-radius: 6px; transition: background 0.2s; }
 .lightbox-nav:hover { background: rgba(255,255,255,0.3); }
 .lightbox-prev { left: 20px; }
 .lightbox-next { right: 20px; }
-.lightbox-counter {
-  position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);
-  color: rgba(255,255,255,0.7); font-size: 14px; font-weight: 500;
-}
-@media (max-width: 768px) {
-  .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 8px; }
-  .gallery-item { border-radius: 8px; }
-  .lightbox-nav { padding: 8px 12px; font-size: 22px; }
-}
-
-
-/* ─── Contact Form (top of page, two-column) ─── */
-.contact-form-section{padding:64px 0;background:linear-gradient(135deg,#0F172A 0%,#1B2A41 100%);color:#fff;position:relative;overflow:hidden}
-.contact-form-section::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height:200%;background:radial-gradient(ellipse,rgba(217,119,6,0.08) 0%,transparent 70%);pointer-events:none}
-.form-layout{max-width:1140px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.form-pitch h2{font-family:'DM Serif Display',Georgia,serif;font-size:clamp(30px,4vw,44px);color:#fff;margin-bottom:16px;line-height:1.15}
-.form-pitch p{color:rgba(255,255,255,0.8);font-size:1.05rem;line-height:1.7;margin-bottom:28px}
-.form-trust-items{display:flex;flex-direction:column;gap:16px}
-.form-trust-item{display:flex;align-items:center;gap:14px}
-.form-trust-icon{width:44px;height:44px;background:rgba(217,119,6,0.15);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.form-trust-icon svg{width:22px;height:22px;stroke:#D97706;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.form-trust-item strong{display:block;color:#fff;font-size:0.95rem;font-weight:600}
-.form-trust-item span{color:rgba(255,255,255,0.6);font-size:0.85rem}
-.contact-form{background:#fff;border-radius:16px;padding:36px;box-shadow:0 20px 60px rgba(0,0,0,0.3);position:relative;z-index:2}
-.contact-form .form-title{font-family:'DM Serif Display',Georgia,serif;font-size:24px;color:#1B2A41;margin-bottom:4px;text-align:center}
-.contact-form .form-subtitle{color:#6B7280;font-size:0.9rem;text-align:center;margin-bottom:24px}
-.contact-form label{display:block;font-weight:600;margin-bottom:4px;font-size:0.9rem;color:#1B2A41}
-.contact-form input,.contact-form textarea{width:100%;padding:11px 14px;border:1px solid #d1d5db;border-radius:8px;font-size:0.95rem;font-family:'Inter',system-ui,sans-serif;margin-bottom:14px;transition:border-color 0.2s,box-shadow 0.2s}
-.contact-form input:focus,.contact-form textarea:focus{outline:none;border-color:#D97706;box-shadow:0 0 0 3px rgba(217,119,6,0.1)}
-.contact-form textarea{min-height:80px;resize:vertical}
-.contact-form button{width:100%;background:#D97706;color:#fff;padding:15px;border:none;border-radius:8px;font-weight:700;font-size:1.05rem;cursor:pointer;transition:background 0.2s,transform 0.2s;font-family:'Inter',system-ui,sans-serif}
-.contact-form button:hover{background:#B45309;transform:translateY(-1px);box-shadow:0 8px 24px rgba(217,119,6,0.3)}
-.contact-form button:disabled{opacity:0.6;cursor:not-allowed;transform:none;box-shadow:none}
-.form-status{text-align:center;margin-top:12px;font-size:0.9rem;min-height:20px}
-.form-status.success{color:#16a34a}
-.form-status.error{color:#dc2626}
-.form-phone-fallback{text-align:center;margin-top:12px;font-size:0.85rem;color:#6B7280}
-.form-phone-fallback a{color:#D97706;font-weight:600;text-decoration:none}
-@media(max-width:768px){
-.form-layout{grid-template-columns:1fr;gap:36px}
-.form-pitch{text-align:center}
-.form-trust-items{align-items:center}
-.contact-form-section{padding:48px 0}
-}
-
-
-/* ─── Standardized Navigation ─── */
-.site-nav{background:#fff;padding:0;border-bottom:1px solid #E5E7EB;position:sticky;top:0;z-index:100;box-shadow:0 1px 3px rgba(0,0,0,0.05)}
-.site-nav .nav-inner{max-width:1200px;margin:0 auto;padding:12px 24px;display:flex;justify-content:space-between;align-items:center}
-.site-nav .nav-logo{font-family:'DM Serif Display',Georgia,serif;font-size:22px;color:#1B2A41;text-decoration:none;white-space:nowrap}
-.site-nav .nav-logo span{color:#D97706}
-.site-nav .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin:0;padding:0}
-.site-nav .nav-links a{font-family:'Inter',system-ui,sans-serif;font-size:14px;font-weight:500;color:#374151;text-decoration:none;transition:color 0.2s;padding:6px 0}
-.site-nav .nav-links a:hover{color:#D97706}
-.site-nav .nav-links a.nav-cta-btn{background:#D97706;color:#fff !important;padding:10px 22px !important;border-radius:6px;font-weight:600;font-size:14px;transition:background 0.2s;display:inline-block}
-.site-nav .nav-links a.nav-cta-btn:hover{background:#B45309;color:#fff !important}
-.site-nav .nav-links a.nav-phone{font-weight:600;color:#1B2A41 !important;font-size:14px}
-.nav-hamburger{display:none;background:none;border:none;cursor:pointer;padding:8px;flex-direction:column;gap:5px}
-.nav-hamburger span{display:block;width:24px;height:2px;background:#1B2A41;transition:all 0.3s}
-@media(max-width:768px){
-.nav-hamburger{display:flex}
-.site-nav .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;padding:16px 24px;border-bottom:1px solid #E5E7EB;box-shadow:0 4px 12px rgba(0,0,0,0.08);gap:0}
-.site-nav .nav-links.open{display:flex}
-.site-nav .nav-links a{padding:12px 0;border-bottom:1px solid #f0f0f0;width:100%}
-.site-nav .nav-links a:last-child{border:none}
-.site-nav .nav-links a.nav-cta-btn{text-align:center;margin-top:8px;display:block;padding:12px 22px !important}
-}
-
+.lightbox-counter { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); color: rgba(255,255,255,0.7); font-size: 14px; }
+@media(max-width:768px){ .lightbox-nav { padding: 8px 12px; font-size: 22px; } }
+.offer-card { border-top: 4px solid var(--primary); } .hero::before { background: linear-gradient(135deg, rgba(42,24,16,0.85) 0%, rgba(42,24,16,0.5) 100%); }
 </style>
 </head>
 <body>
-
-<!-- Navigation -->
 <nav class="site-nav">
 <div class="nav-inner">
-  <a href="#" class="nav-brand">San Ramon <span>Kitchen Design</span></a>
+  <a href="#" class="nav-logo">San Ramon<span>Kitchen</span></a>
   <button class="nav-hamburger" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
   <ul class="nav-links">
-<li><a href="#services">Services</a></li>
-<li><a href="#gallery">Our Work</a></li>
-<li><a href="tel:4159079070" class="nav-phone">(415) 907-9070</a></li>
-<li><a href="#contact" class="nav-cta-btn">Free Estimate</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#gallery">Our Work</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="tel:4159079070" class="nav-phone">(415) 907-9070</a></li>
+    <li><a href="#contact" class="nav-cta-btn">Free Estimate</a></li>
   </ul>
 </div>
 </nav>
-
-
-<!-- Header -->
-
-
-<!-- Split Hero -->
 <section class="hero">
   <div class="container">
-    <div class="hero-text">
-      <span class="hero-label">San Ramon Valley's Kitchen Experts</span>
-      <h1>San Ramon Valley's Premier Kitchen Designers</h1>
-      <p>Premium kitchen remodeling for Dougherty Valley, Bollinger Canyon, and greater San Ramon. We design and build kitchens that match the elevated standard of Tri-Valley living.</p>
+    <div class="hero-content">
+      <span class="hero-badge">Licensed & Insured Contractor</span>
+      <h1>San Ramon's Kitchen Remodeling Experts</h1>
+      <p>Custom kitchen remodeling that transforms the heart of your San Ramon home. Premium materials, expert design, and craftsmanship that lasts generations.</p>
+      <div class="hero-actions"><a href="tel:4159079070" class="btn btn-primary">Get Free Estimate</a><a href="#gallery" class="btn btn-white">View Our Work</a></div>
       <div class="hero-stats">
-        <div class="stat">
-          <h3>21+</h3>
-          <p>Years Experience</p>
-        </div>
-        <div class="stat">
-          <h3>200+</h3>
-          <p>5-Star Reviews</p>
-        </div>
-        <div class="stat">
-          <h3>Free</h3>
-          <p>3D Design</p>
-        </div>
-      </div>
-      <div class="hero-actions">
-        <a href="#contact" class="btn-primary">Get Free Estimate</a>
-        <a href="#showcase" class="btn-secondary">View Our Kitchens</a>
+        <div class="hero-stat"><strong>21+</strong><span>Years Experience</span></div>
+        <div class="hero-stat"><strong>200+</strong><span>5-Star Reviews</span></div>
+        <div class="hero-stat"><strong>$0</strong><span>Down to Start</span></div>
       </div>
     </div>
   </div>
-  <div class="hero-image" role="img" aria-label="Bright white modern kitchen remodel in San Ramon"></div>
 </section>
-
-<!-- ═══ CONTACT FORM — Top of Page ═══ -->
 <section class="contact-form-section" id="contact">
 <div class="form-layout">
   <div class="form-pitch">
     <h2>Get Your Free Estimate Today</h2>
     <p>Tell us about your project and we'll get back to you with a detailed proposal — usually within 12 hours. No pressure, no obligation.</p>
-    <div class="form-trust-items">
-      <div class="form-trust-item">
-        <div class="form-trust-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-        <div><strong>Licensed & Insured</strong><span>CA Lic. #1079020</span></div>
-      </div>
-      <div class="form-trust-item">
-        <div class="form-trust-icon"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-        <div><strong>200+ Five-Star Reviews</strong><span>Trusted by Bay Area families</span></div>
-      </div>
-      <div class="form-trust-item">
-        <div class="form-trust-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
-        <div><strong>Proposal in 12 Hours</strong><span>Fast, transparent pricing</span></div>
-      </div>
-      <div class="form-trust-item">
-        <div class="form-trust-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></div>
-        <div><strong>Free 3D Design</strong><span>See your space before we build</span></div>
-      </div>
-    </div>
+    <div class="form-trust-items"><div class="form-trust-item"><div class="form-trust-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><strong>Licensed & Insured</strong><span>CA Lic. #1079020</span></div></div><div class="form-trust-item"><div class="form-trust-icon"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><div><strong>200+ Five-Star Reviews</strong><span>Trusted by Bay Area families</span></div></div><div class="form-trust-item"><div class="form-trust-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div><strong>Proposal in 12 Hours</strong><span>Fast, transparent pricing</span></div></div><div class="form-trust-item"><div class="form-trust-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></div><div><strong>Free 3D Design</strong><span>See your space before we build</span></div></div></div>
   </div>
   <div>
     <form class="contact-form" id="contactForm" novalidate>
@@ -700,210 +243,10 @@ h1, h2, h3, h4 { font-family: 'DM Serif Display', serif; color: var(--navy); lin
       <div class="form-status" id="formStatus"></div>
       <div class="form-phone-fallback">Or call us: <a href="tel:4159079070">(415) 907-9070</a></div>
     </form>
-    <noscript><p style="text-align:center;margin-top:16px;color:#ccc;">Forms require JavaScript. Call us at <a href="tel:4159079070" style="color:#D97706;">(415) 907-9070</a> instead.</p></noscript>
+    <noscript><p style="text-align:center;margin-top:16px;color:#999;">Forms require JavaScript. Call <a href="tel:4159079070" style="color:var(--primary);">(415) 907-9070</a> instead.</p></noscript>
   </div>
 </div>
 </section>
-
-<!-- Offers -->
-<section class="offers-banner" id="offers">
-  <div class="container">
-    <p class="section-label">Exclusive Offers</p>
-    <h2>San Ramon Homeowner Specials</h2>
-    <div class="offers-row">
-      <div class="offer-item">
-        <div class="offer-amount">35%</div>
-        <h3>Kitchen Remodeling</h3>
-        <p>Custom cabinetry, premium countertops, complete layout redesigns for San Ramon Valley homes.</p>
-      </div>
-      <div class="offer-item">
-        <div class="offer-amount">25%</div>
-        <h3>Bathroom Remodeling</h3>
-        <p>Luxury bathroom renovations with designer tile, custom vanities, and spa-grade fixtures.</p>
-      </div>
-      <div class="offer-item">
-        <div class="offer-amount">Free</div>
-        <h3>3D Kitchen Design</h3>
-        <p>Photorealistic 3D renderings so you can see and approve every detail before construction starts.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Kitchen Showcase -->
-<section class="showcase" id="showcase">
-  <div class="container">
-    <p class="section-label">Recent Projects</p>
-    <h2 class="section-title">Kitchens Across San Ramon Valley</h2>
-    <p class="section-subtitle">From Dougherty Valley estates to Bollinger Canyon townhomes, we deliver kitchens that exceed expectations.</p>
-    <div class="showcase-grid">
-      <div class="showcase-card">
-        <img src="images/kitchen-1.jpg" alt="Modern white kitchen in San Ramon" loading="lazy">
-        <div class="showcase-info">
-          <h3>Dougherty Valley Estate</h3>
-          <p>Open-concept kitchen with waterfall island</p>
-        </div>
-      </div>
-      <div class="showcase-card">
-        <img src="images/kitchen-2.jpg" alt="Luxury kitchen remodel" loading="lazy">
-        <div class="showcase-info">
-          <h3>Bollinger Canyon Home</h3>
-          <p>Custom cabinetry with integrated appliances</p>
-        </div>
-      </div>
-      <div class="showcase-card">
-        <img src="images/kitchen-3.jpg" alt="Contemporary kitchen design" loading="lazy">
-        <div class="showcase-info">
-          <h3>Canyon Lakes Remodel</h3>
-          <p>Chef's kitchen with double island layout</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Services -->
-<section class="services" id="services">
-  <div class="container">
-    <div class="services-layout">
-      <div class="services-intro">
-        <p class="section-label">Our Expertise</p>
-        <h2>Kitchen Specialists. Whole-Home Experts.</h2>
-        <p>Kitchen design is our passion and our specialty. But when your San Ramon home needs more, we deliver the same premium quality across every service.</p>
-        <a href="tel:4159079070" class="btn-primary">Get Started Today</a>
-      </div>
-      <div class="services-list">
-        <div class="svc-card primary">
-          <span class="svc-tag">Our Specialty</span>
-          <h3>Kitchen Remodeling</h3>
-          <p>Complete kitchen transformations designed for the way San Ramon families live and entertain. From space planning to the final backsplash tile, we manage every detail.</p>
-        </div>
-        <div class="svc-card">
-          <h3>Bathroom Remodeling</h3>
-          <p>Spa-inspired bathrooms with frameless glass, heated floors, and designer finishes.</p>
-        </div>
-        <div class="svc-card">
-          <h3>Full Home Remodeling</h3>
-          <p>Comprehensive renovations that update your entire home to match Tri-Valley's premium standard.</p>
-        </div>
-        <div class="svc-card">
-          <h3>ADU Construction</h3>
-          <p>Accessory dwelling units to maximize your San Ramon property value -- perfect for guests or rental income.</p>
-        </div>
-        <div class="svc-card">
-          <h3>Home Additions</h3>
-          <p>Seamless room additions that expand your living space without compromising your home's flow.</p>
-        </div>
-        <div class="svc-card">
-          <h3>Outdoor Living</h3>
-          <p>Outdoor kitchens, covered patios, and living spaces built for San Ramon's climate.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Process -->
-<section class="process">
-  <div class="container">
-    <div style="text-align:center;">
-      <p class="section-label">Our Process</p>
-      <h2 class="section-title">Your Kitchen in 5 Steps</h2>
-      <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">A clear, structured process so there are never surprises -- just a beautiful new kitchen.</p>
-    </div>
-    <div class="process-timeline">
-      <div class="timeline-step">
-        <div class="timeline-dot">1</div>
-        <h4>Free Consultation</h4>
-        <p>We visit your San Ramon home, discuss your vision, and take detailed measurements.</p>
-      </div>
-      <div class="timeline-step">
-        <div class="timeline-dot">2</div>
-        <h4>Proposal in 12hrs</h4>
-        <p>Receive a comprehensive proposal with itemized pricing within 12 hours.</p>
-      </div>
-      <div class="timeline-step">
-        <div class="timeline-dot">3</div>
-        <h4>3D Design</h4>
-        <p>Review photorealistic 3D renderings and refine until it's perfect.</p>
-      </div>
-      <div class="timeline-step">
-        <div class="timeline-dot">4</div>
-        <h4>Materials Selection</h4>
-        <p>Hand-pick countertops, cabinets, tile, fixtures, and hardware.</p>
-      </div>
-      <div class="timeline-step">
-        <div class="timeline-dot">5</div>
-        <h4>Construction</h4>
-        <p>Professional crews deliver your kitchen on time, on budget, beautifully.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Testimonials -->
-<section class="testimonials">
-  <div class="container">
-    <div style="text-align:center;">
-      <p class="section-label">Client Reviews</p>
-      <h2 class="section-title">San Ramon Homeowners Love Their New Kitchens</h2>
-    </div>
-    <div class="testimonials-row">
-      <div class="review-card">
-        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <blockquote>"We just finished a complete kitchen remodel in our Dougherty Valley home and the result is stunning. The team helped us design an open layout with a massive island that's now the center of our family's life. They worked around our schedule and finished ahead of time. Could not be happier."</blockquote>
-        <div class="reviewer">
-          <div class="reviewer-initials">JP</div>
-          <div class="reviewer-info">
-            <p>Jennifer P.</p>
-            <span>Dougherty Valley, San Ramon</span>
-          </div>
-        </div>
-      </div>
-      <div class="review-card">
-        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <blockquote>"After getting three quotes, we went with this team for our kitchen renovation near Bollinger Canyon. The 3D design process was incredible -- we could see exactly what our kitchen would look like before committing. The craftsmanship on the custom cabinets is outstanding. Worth every penny."</blockquote>
-        <div class="reviewer">
-          <div class="reviewer-initials">DK</div>
-          <div class="reviewer-info">
-            <p>David K.</p>
-            <span>Bollinger Canyon, San Ramon</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Local Section -->
-<section class="local">
-  <div class="container">
-    <div class="local-split">
-      <div>
-        <p class="section-label" style="color:var(--amber-light);">Serving San Ramon Valley</p>
-        <h2>Built for San Ramon Living</h2>
-        <p>San Ramon Valley is home to some of the Bay Area's finest residences -- from the spacious estates of Dougherty Valley to the scenic properties along Bollinger Canyon. These homes deserve kitchens that match their caliber.</p>
-        <p>With over 21 years serving the Tri-Valley, we understand the unique needs of San Ramon homeowners: open layouts for entertaining, premium materials that stand up to busy family life, and designs that add real value to your property. Financing is available on all projects.</p>
-        <div class="local-areas">
-          <div class="area-tag">Dougherty Valley</div>
-          <div class="area-tag">Bollinger Canyon</div>
-          <div class="area-tag">Canyon Lakes</div>
-          <div class="area-tag">Bishop Ranch Area</div>
-          <div class="area-tag">Crow Canyon</div>
-          <div class="area-tag">Montevideo</div>
-        </div>
-        <a href="tel:4159079070" class="btn-primary" style="margin-top:8px;">Schedule Your Free Consultation</a>
-      </div>
-      <div class="local-img">
-        <img src="images/kitchen-4.jpg" alt="Luxury San Ramon home" loading="lazy">
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-
-<!-- ═══ OUR WORK GALLERY ═══ -->
 <section class="gallery-section" id="gallery">
 <div class="section-inner">
   <div class="gallery-header">
@@ -954,8 +297,6 @@ h1, h2, h3, h4 { font-family: 'DM Serif Display', serif; color: var(--navy); lin
   </div>
 </div>
 </section>
-
-<!-- Lightbox -->
 <div class="lightbox" id="lightbox">
   <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
   <button class="lightbox-nav lightbox-prev" onclick="navLightbox(-1)">&#8249;</button>
@@ -963,142 +304,118 @@ h1, h2, h3, h4 { font-family: 'DM Serif Display', serif; color: var(--navy); lin
   <button class="lightbox-nav lightbox-next" onclick="navLightbox(1)">&#8250;</button>
   <div class="lightbox-counter" id="lightbox-counter"></div>
 </div>
-
-<script>
-const galleryPhotos = ['images/kitchen-1.jpg', 'images/kitchen-2.jpg', 'images/kitchen-3.jpg', 'images/kitchen-4.jpg', 'images/kitchen-5.jpg', 'images/kitchen-6.jpg', 'images/kitchen-7.jpg', 'images/kitchen-8.jpg', 'images/kitchen-9.jpg', 'images/kitchen-10.jpg', 'images/kitchen-11.jpg', 'images/kitchen-12.jpg', 'images/kitchen-13.jpg', 'images/kitchen-14.jpg', 'images/kitchen-15.jpg', 'images/bathroom-1.jpg', 'images/bathroom-2.jpg', 'images/bathroom-3.jpg', 'images/bathroom-4.jpg', 'images/bathroom-5.jpg', 'images/bathroom-6.jpg', 'images/bathroom-7.jpg', 'images/bathroom-8.jpg', 'images/bathroom-9.jpg', 'images/bathroom-10.jpg', 'images/outdoor-1.jpg', 'images/outdoor-2.jpg', 'images/outdoor-3.jpg', 'images/outdoor-4.jpg', 'images/detail-1.jpg'];
-const galleryLabels = ['Kitchen Remodel', 'Kitchen Remodel', 'Kitchen Remodel', 'Kitchen Remodel', 'Kitchen Remodel', 'Kitchen Remodel', 'Kitchen Remodel', 'Kitchen Remodel', 'Kitchen Remodel', 'Kitchen Remodel', 'Kitchen Remodel', 'Kitchen Remodel', 'Kitchen Remodel', 'Kitchen Remodel', 'Kitchen Remodel', 'Bathroom Remodel', 'Bathroom Remodel', 'Bathroom Remodel', 'Bathroom Remodel', 'Bathroom Remodel', 'Bathroom Remodel', 'Bathroom Remodel', 'Bathroom Remodel', 'Bathroom Remodel', 'Bathroom Remodel', 'Outdoor Living', 'Outdoor Living', 'Outdoor Living', 'Outdoor Living', 'Craftsmanship Detail'];
-let currentPhoto = 0;
-let visiblePhotos = galleryPhotos.map((_, i) => i);
-
-function filterGallery(cat) {
-  document.querySelectorAll('.gallery-filter-btn').forEach(b => b.classList.remove('active'));
-  event.target.classList.add('active');
-  const items = document.querySelectorAll('.gallery-item');
-  let count = 0;
-  items.forEach(item => {
-    const show = cat === 'all' || item.dataset.category === cat;
-    item.style.display = show ? '' : 'none';
-    if (show) count++;
-  });
-  document.getElementById('showMoreBtn').style.display = 'none';
-  visiblePhotos = [];
-  items.forEach((item, i) => { if (item.style.display !== 'none') visiblePhotos.push(i); });
-}
-
-function showAllPhotos() {
-  document.querySelectorAll('.gallery-item').forEach(item => {
-    if (item.dataset.category) item.style.display = '';
-  });
-  document.getElementById('showMoreBtn').style.display = 'none';
-  visiblePhotos = galleryPhotos.map((_, i) => i);
-}
-
-function openLightbox(idx) {
-  currentPhoto = idx;
-  updateLightbox();
-  document.getElementById('lightbox').classList.add('active');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeLightbox() {
-  document.getElementById('lightbox').classList.remove('active');
-  document.body.style.overflow = '';
-}
-
-function navLightbox(dir) {
-  const currentIdx = visiblePhotos.indexOf(currentPhoto);
-  let nextIdx = currentIdx + dir;
-  if (nextIdx < 0) nextIdx = visiblePhotos.length - 1;
-  if (nextIdx >= visiblePhotos.length) nextIdx = 0;
-  currentPhoto = visiblePhotos[nextIdx];
-  updateLightbox();
-}
-
-function updateLightbox() {
-  document.getElementById('lightbox-img').src = galleryPhotos[currentPhoto];
-  const pos = visiblePhotos.indexOf(currentPhoto) + 1;
-  document.getElementById('lightbox-counter').textContent = pos + ' / ' + visiblePhotos.length;
-}
-
-document.getElementById('lightbox').addEventListener('click', function(e) {
-  if (e.target === this) closeLightbox();
-});
-
-document.addEventListener('keydown', function(e) {
-  if (!document.getElementById('lightbox').classList.contains('active')) return;
-  if (e.key === 'Escape') closeLightbox();
-  if (e.key === 'ArrowLeft') navLightbox(-1);
-  if (e.key === 'ArrowRight') navLightbox(1);
-});
-</script>
-<section class="cta">
-  <div class="container">
-    <h2>Your Dream Kitchen Starts Here</h2>
-    <p>Book a free in-home consultation and receive a detailed proposal within 12 hours. San Ramon's finest kitchens begin with a single call.</p>
-    <a href="tel:4159079070" class="cta-phone">(415) 907-9070</a>
-    <a href="tel:4159079070" class="btn-primary">Book Free Consultation</a>
-    <p class="cta-sub">Licensed & Insured | Financing Available | 200+ 5-Star Reviews</p>
+<section class="offers">
+  <div class="container text-center">
+    <span class="section-label">Limited-Time Offers</span>
+    <h2 class="section-title">Exclusive Savings for San Ramon Homeowners</h2>
+    <p class="section-subtitle mx-auto">Start your dream project today with premium materials, expert design, and unbeatable value.</p>
+    <div class="offers-grid"><div class="offer-card"><div class="offer-pct">35%</div><div class="offer-label">Off</div><h3>Kitchen Remodeling</h3><p>Complete kitchen transformations with custom cabinetry, quartz countertops, and premium finishes.</p></div><div class="offer-card"><div class="offer-pct">25%</div><div class="offer-label">Off</div><h3>Bathroom Remodeling</h3><p>Spa-inspired bathrooms with heated floors, frameless glass, and designer tile.</p></div><div class="offer-card"><div class="offer-pct">Free</div><div class="offer-label">Included</div><h3>3D Design Rendering</h3><p>Visualize your remodel before construction begins with photorealistic 3D renderings.</p></div></div>
   </div>
 </section>
-
-<!-- Footer -->
-<footer class="footer">
+<section class="services" id="services">
   <div class="container">
-    <div class="footer-inner">
-      <div>
-        <h4>San Ramon Kitchen Design</h4>
-        <p>San Ramon Valley's premier kitchen design and remodeling firm. Over 21 years of experience creating premium kitchens for Dougherty Valley, Bollinger Canyon, and the greater Tri-Valley area. Licensed, insured, and financing available.</p>
+    <span class="section-label">What We Do</span>
+    <h2 class="section-title">Full-Service Remodeling for San Ramon Homes</h2>
+    <p class="section-subtitle">From start to finish, we handle every detail with precision and care.</p>
+    <div class="services-grid"><div class="service-item"><div class="service-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><path d="M9 22V12h6v10"/></svg></div><div><h3>Kitchen Remodeling</h3><p>Complete kitchen renovations with custom cabinetry, stone countertops, premium appliances, and thoughtful layouts designed for how you live.</p></div></div><div class="service-item"><div class="service-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a4 4 0 00-8 0v2"/></svg></div><div><h3>Bathroom Remodeling</h3><p>Luxurious bathroom overhauls with walk-in showers, freestanding tubs, custom vanities, and high-end fixtures for a true spa experience.</p></div></div><div class="service-item"><div class="service-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div><div><h3>Full Home Remodeling</h3><p>Whole-house renovations that reimagine your entire living space. We coordinate every trade and detail from start to finish.</p></div></div><div class="service-item"><div class="service-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg></div><div><h3>ADU Construction</h3><p>Accessory dwelling units that add value and versatility to your property. Full design-build from permits to completion.</p></div></div><div class="service-item"><div class="service-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><div><h3>Home Additions</h3><p>Expand your living space with seamless room additions that blend perfectly with your home's existing architecture and style.</p></div></div><div class="service-item"><div class="service-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg></div><div><h3>Outdoor Living</h3><p>Outdoor kitchens, patios, pergolas, and living spaces designed for year-round entertainment and relaxation.</p></div></div></div>
+  </div>
+</section>
+<section class="process" id="process">
+  <div class="container text-center">
+    <span class="section-label">How It Works</span>
+    <h2 class="section-title">Our Proven 5-Step Process</h2>
+    <div class="process-steps"><div class="step"><div class="step-number">1</div><div class="step-content"><h3>Free Consultation</h3><p>We visit your home, discuss your vision, and take measurements at no cost.</p></div></div><div class="step"><div class="step-number">2</div><div class="step-content"><h3>Proposal in 12hrs</h3><p>Receive a detailed, transparent proposal within 12 hours of your consultation.</p></div></div><div class="step"><div class="step-number">3</div><div class="step-content"><h3>3D Design</h3><p>See your project come to life with photorealistic 3D renderings before we start.</p></div></div><div class="step"><div class="step-number">4</div><div class="step-content"><h3>Materials Selection</h3><p>Choose from premium materials with guidance from our design team.</p></div></div><div class="step"><div class="step-number">5</div><div class="step-content"><h3>Construction</h3><p>Our skilled crews bring your project to life with meticulous attention to detail.</p></div></div></div>
+  </div>
+</section>
+<section class="reviews" id="reviews">
+  <div class="container text-center">
+    <span class="section-label">Homeowner Reviews</span>
+    <h2 class="section-title">Loved by San Ramon Families</h2>
+    <p class="section-subtitle mx-auto">See what our clients have to say about working with us.</p>
+    <div class="reviews-grid"><div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"Our San Ramon kitchen needed a complete overhaul. The design team created a layout that doubled our counter space and improved the flow of our entire first floor."</blockquote>
+        <div class="review-author">Ryan & Jessica M.</div>
+        <div class="review-location">San Ramon</div>
+      </div><div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"They matched our existing hardwood floors seamlessly and the custom cabinetry is gorgeous. Every guest asks who did our kitchen."</blockquote>
+        <div class="review-author">Linda T.</div>
+        <div class="review-location">Dougherty Valley</div>
+      </div></div>
+  </div>
+</section>
+<section class="local" id="local">
+  <div class="container">
+    <div class="local-split">
+      <img src="images/kitchen-1.jpg" alt="San Ramon home" class="local-img">
+      <div class="local-text">
+        <span class="section-label">Proudly Local</span>
+        <h3>Kitchen Experts for San Ramon Homes</h3>
+        <p>San Ramon families deserve kitchens that match their lifestyle. From Dougherty Valley to Canyon Lakes, we design and build kitchens that become the center of family life.</p>
+        <p>Deep knowledge of San Ramon building codes, HOA requirements, and architectural styles. Licensed, insured, and locally trusted.</p>
+        <ul><li>Dougherty Valley</li><li>Canyon Lakes</li><li>Montevideo & Westside</li><li>Crow Canyon & Bollinger</li><li>Old Ranch & Iron Horse Trail</li></ul>
       </div>
-      <div>
-        <h4>Services</h4>
-        <ul>
-          <li><a href="#">Kitchen Remodeling</a></li>
-          <li><a href="#">Bathroom Remodeling</a></li>
-          <li><a href="#">Full Home Remodeling</a></li>
-          <li><a href="#">ADU Construction</a></li>
-          <li><a href="#">Home Additions</a></li>
-          <li><a href="#">Outdoor Living</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <ul>
-          <li><a href="tel:4159079070">(415) 907-9070</a></li>
-          <li><a href="#">San Ramon, CA</a></li>
-          <li><a href="#">Free Consultation</a></li>
-          <li><a href="#">Financing Available</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bar">
-      <span>San Ramon Kitchen Design. Licensed & Insured.</span>
-      <a href="tel:4159079070">(415) 907-9070</a>
     </div>
   </div>
-
-<div style="text-align:center;padding:8px 0 0;font-size:0.8rem;opacity:0.6;color:rgba(255,255,255,0.5);">CA Lic. #1079020</div>
+</section>
+<section class="cta">
+  <div class="container">
+    <h2>Ready to Transform Your San Ramon Home?</h2>
+    <p>Schedule your free consultation today. We'll bring ideas, answer your questions, and provide a detailed proposal within 12 hours.</p>
+    <div class="cta-actions">
+      <a href="tel:4159079070" class="btn btn-primary">Call for Free Estimate</a>
+      <a href="#services" class="btn btn-outline">View Services</a>
+    </div>
+    <div class="cta-phone"><a href="tel:4159079070">(415) 907-9070</a></div>
+  </div>
+</section>
+<footer>
+  <div class="container">
+    <span>Sanramonkitchendesign &mdash; Licensed & Insured General Contractor &mdash; Serving San Ramon</span>
+    <a href="tel:4159079070">(415) 907-9070</a>
+  </div>
+  <div class="footer-license">CA Lic. #1079020</div>
 </footer>
-
 <script>
+const galleryPhotos=['images/kitchen-1.jpg','images/kitchen-2.jpg','images/kitchen-3.jpg','images/kitchen-4.jpg','images/kitchen-5.jpg','images/kitchen-6.jpg','images/kitchen-7.jpg','images/kitchen-8.jpg','images/kitchen-9.jpg','images/kitchen-10.jpg','images/kitchen-11.jpg','images/kitchen-12.jpg','images/kitchen-13.jpg','images/kitchen-14.jpg','images/kitchen-15.jpg','images/bathroom-1.jpg','images/bathroom-2.jpg','images/bathroom-3.jpg','images/bathroom-4.jpg','images/bathroom-5.jpg','images/bathroom-6.jpg','images/bathroom-7.jpg','images/bathroom-8.jpg','images/bathroom-9.jpg','images/bathroom-10.jpg','images/outdoor-1.jpg','images/outdoor-2.jpg','images/outdoor-3.jpg','images/outdoor-4.jpg','images/detail-1.jpg'];
+const galleryLabels=['Kitchen Remodel','Kitchen Remodel','Kitchen Remodel','Kitchen Remodel','Kitchen Remodel','Kitchen Remodel','Kitchen Remodel','Kitchen Remodel','Kitchen Remodel','Kitchen Remodel','Kitchen Remodel','Kitchen Remodel','Kitchen Remodel','Kitchen Remodel','Kitchen Remodel','Bathroom Remodel','Bathroom Remodel','Bathroom Remodel','Bathroom Remodel','Bathroom Remodel','Bathroom Remodel','Bathroom Remodel','Bathroom Remodel','Bathroom Remodel','Bathroom Remodel','Outdoor Living','Outdoor Living','Outdoor Living','Outdoor Living','Craftsmanship Detail'];
+let currentPhoto=0;let visiblePhotos=galleryPhotos.map((_,i)=>i);
+function filterGallery(cat){
+document.querySelectorAll('.gallery-filter-btn').forEach(b=>b.classList.remove('active'));
+event.target.classList.add('active');
+const items=document.querySelectorAll('.gallery-item');let count=0;
+items.forEach(item=>{const show=cat==='all'||item.dataset.category===cat;item.style.display=show?'':'none';if(show)count++;});
+document.getElementById('showMoreBtn').style.display='none';
+visiblePhotos=[];items.forEach((item,i)=>{if(item.style.display!=='none')visiblePhotos.push(i);});}
+function showAllPhotos(){document.querySelectorAll('.gallery-item').forEach(item=>{if(item.dataset.category)item.style.display='';});
+document.getElementById('showMoreBtn').style.display='none';visiblePhotos=galleryPhotos.map((_,i)=>i);}
+function openLightbox(idx){currentPhoto=idx;updateLightbox();document.getElementById('lightbox').classList.add('active');document.body.style.overflow='hidden';}
+function closeLightbox(){document.getElementById('lightbox').classList.remove('active');document.body.style.overflow='';}
+function navLightbox(dir){const ci=visiblePhotos.indexOf(currentPhoto);let ni=ci+dir;if(ni<0)ni=visiblePhotos.length-1;if(ni>=visiblePhotos.length)ni=0;currentPhoto=visiblePhotos[ni];updateLightbox();}
+function updateLightbox(){document.getElementById('lightbox-img').src=galleryPhotos[currentPhoto];const pos=visiblePhotos.indexOf(currentPhoto)+1;document.getElementById('lightbox-counter').textContent=pos+' / '+visiblePhotos.length;}
+document.getElementById('lightbox').addEventListener('click',function(e){if(e.target===this)closeLightbox();});
+document.addEventListener('keydown',function(e){if(!document.getElementById('lightbox').classList.contains('active'))return;if(e.key==='Escape')closeLightbox();if(e.key==='ArrowLeft')navLightbox(-1);if(e.key==='ArrowRight')navLightbox(1);});
+</script><script>
 (function(){
 var f=document.getElementById('contactForm'),s=document.getElementById('formStatus');
 if(!f)return;
 f.addEventListener('submit',function(e){
 e.preventDefault();
 s.className='form-status';s.textContent='';
-var b=f.querySelector('button');b.disabled=true;b.textContent='Sending...';
+var b=f.querySelector('button[type="submit"]');b.disabled=true;b.textContent='Sending...';
 var d={name:f.name.value.trim(),phone:f.phone.value.trim(),email:f.email.value.trim(),
        message:f.message.value.trim(),domain:location.hostname,website:f.website.value};
 if(!d.name||!d.phone||!d.email||!d.message){
 s.className='form-status error';s.textContent='Please fill in all fields.';
-b.disabled=false;b.textContent='Send Message';return;}
+b.disabled=false;b.textContent='Get My Free Estimate';return;}
 fetch('https://app.revnodeai.com/api/public/contact-form',{
 method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)
 }).then(function(r){return r.json()}).then(function(j){
 if(j.status==='ok'){s.className='form-status success';s.textContent='Thank you! We\'ll be in touch shortly.';f.reset();}
 else{s.className='form-status error';s.textContent=j.message||'Something went wrong. Please call us at (415) 907-9070.';}
 }).catch(function(){s.className='form-status error';s.textContent='Something went wrong. Please call us at (415) 907-9070.';
-}).finally(function(){b.disabled=false;b.textContent='Send Message';});
+}).finally(function(){b.disabled=false;b.textContent='Get My Free Estimate';});
 });
 })();
 </script>
